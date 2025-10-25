@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="success-container">
+    <div class="success-card">
+        <div class="success-icon">🎉</div>
+        <h2>Регистрация успешно завершена!</h2>
+
+        <div class="user-info-card">
+            <h3>📋 Данные зарегистрированного пользователя:</h3>
+            <div class="user-details">
+                <div class="detail-item">
+                    <span class="detail-label">ID:</span>
+                    <span class="detail-value">{{ user.id }}</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Email:</span>
+                    <span class="detail-value">{{ user.email }}</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">ФИО:</span>
+                    <span class="detail-value">{{ user.last_name }} {{ user.first_name }} {{ user.middle_name }}</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Должность:</span>
+                    <span class="detail-value">{{ user.position }}</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Дата регистрации:</span>
+                    <span class="detail-value">Сегодня</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="success-actions">
+            <a href="/" class="action-btn primary">📝 Зарегистрировать еще одного пользователя</a>
+            <a href="/users" class="action-btn secondary">👥 Посмотреть всех пользователей</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
